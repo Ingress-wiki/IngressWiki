@@ -1,0 +1,65 @@
+---
+title: Set up Preview
+topic: contributing
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+
+
+Ingress.Wiki is built with [Starlight](https://starlight.astro.build) and [Astro](https://astro.build). To be able to preview your contribution before contributing to [our GitHub repo](https://github.com/Ingress-wiki/IngressWiki), you need to set up a development environment.
+
+:::note
+For smal changes like typo fixes, you can use the GitHub web interface to edit. Every page has an "Edit page" link at the bottom.
+:::
+
+You can set up environment on your own computer if you plan to contribute often or already have most of the tools, but if you're not into programming, you can use a cloud-based development environment like [GitHub Codespaces](https://github.com/features/codespaces).
+
+<Tabs>
+  <TabItem label="On Your Computer" icon="laptop">
+    <Steps>
+      1. Install [Node.js](https://nodejs.org/en/download) and [pnpm](https://pnpm.io/installation#using-a-standalone-script).
+
+         We use pnpm as our package manager. Even though npm will happily install the dependencies, we recommend using pnpm to avoid potential dependency version issues.
+
+      2. Clone our GitHub repo. If you are not familiar with Git, we recommend [GitHub Desktop](https://github.com/apps/desktop) for it's relatively easy-to-use interface.
+
+         Repo URL: `https://github.com/Ingress-wiki/IngressWiki`
+
+      3. Run `pnpm install` in the repo directory to install the dependencies.
+
+      4. Run `pnpm dev` to start the development server. You should see something like this:
+
+         ```
+         astro  v5.2.5 ready in 1473 ms
+
+         ┃ Local    http://localhost:4321/
+         ┃ Network  use --host to expose
+         ```
+
+         Open the URL after `Local` in your browser to see the site.
+    </Steps>
+  </TabItem>
+
+  <TabItem label="GitHub Codespaces" icon="github">
+    <Steps>
+      1. Open the [GitHub repo](https://github.com/Ingress-wiki/IngressWiki) in your browser.
+
+      2. Click the "Code" button, select "Codespaces" tab and create a new Codespace.
+
+      3. Wait for it to load. If it recommends you to install Astro extension, click "Install".
+
+      4. In the terminal, run `pnpm install` to install the dependencies.
+
+      5. Run `pnpm dev` to start the dev server.
+
+      6. You should see a popup saying something like:
+
+         > Your application running on port 4321 is available.
+
+         Click "Open in Browser" to see the site.
+    </Steps>
+  </TabItem>
+</Tabs>
+
+Now you can start contributing by editing the Markdown files in the `src/content/docs` directory. The site will automatically update when you save the file. Afterwards you can submit your changes by creating a pull request on GitHub.
