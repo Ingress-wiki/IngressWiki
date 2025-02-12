@@ -29,14 +29,14 @@
       "#ff0e82",
       "#b400ff",
     ];
-    return colorOneToSeven[level + 1] ?? "#5200ff";
+    return colorOneToSeven[level - 1] ?? "#5200ff";
   }
 
   const levelColor = levelColorFor(l);
 </script>
 
-<span
-  class="font-exo font-semibold px-0.5 inline-block text-white [text-shadow:0_0_2px_var(--color-zinc-950)]"
->
-  <span class="font-bold" style:color={levelColor}>L</span>{l}
+<span class="font-exo font-semibold px-0.5 inline-block">
+  <span class="font-bold" style:color={levelColor}>L</span><span
+    class="opacity-90">{l}</span
+  >
 </span>
