@@ -7,11 +7,9 @@
   heti-spacing + sub {
     margin-inline-start: 0;
   }
-  .heti-spacing-start {
-    margin-inline-end: 0.25em;
-  }
-  .heti-spacing-end {
-    margin-inline-start: 0.25em;
+  .heti-spacing-start::after, .heti-spacing-end::before {
+    display: inline;
+    content: " "; /* U+2009	THIN SPACE */
   }
   heti-adjacent {
     display: inline;
@@ -29,8 +27,8 @@
   .main-frame ins,
   .main-frame s,
   .main-frame u {
-    margin-inline-start: 1px;
-    margin-inline-end: 1px;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
   }
 </style>
 <script src="./heti"></script>
