@@ -16,6 +16,12 @@ const DEFAULT_LOCALE = SUPPORTED_LOCALES[0] || "en";
 >
   <head>
     <meta charset="UTF-8" />
+    <script is:inline>
+      const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
     <script>
       import { match } from "@formatjs/intl-localematcher";
 
@@ -30,5 +36,15 @@ const DEFAULT_LOCALE = SUPPORTED_LOCALES[0] || "en";
 
       window.location.replace(new URL(`/${matched}/`, window.location.origin));
     </script>
+    <style>
+      :root,
+      :root[data-theme="light"] {
+        background-color: hsl(0, 0%, 100%);
+      }
+
+      :root[data-theme="dark"] {
+        background-color: hsl(224, 10%, 10%);
+      }
+    </style>
   </head>
 </html>
