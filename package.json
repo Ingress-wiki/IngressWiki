@@ -17,6 +17,7 @@
     "@braindb/core": "^0.0.15",
     "@fontsource-variable/exo": "^5.1.1",
     "@fontsource/quantico": "^5.1.1",
+    "@formatjs/intl-localematcher": "^0.6.0",
     "@tailwindcss/vite": "^4.0.6",
     "astro": "^5.2.6",
     "heti": "^0.9.5",

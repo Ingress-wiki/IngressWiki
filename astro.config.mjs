@@ -101,10 +101,6 @@ export default defineConfig({
     brainDbAstro(),
   ],
 
-  redirects: {
-    "/": "/en",
-  },
-
   vite: {
     plugins: [tailwindcss()],
     server: {
