@@ -6,9 +6,12 @@
 
 @import "@fontsource/quantico/400.css";
 @import "@fontsource/quantico/700.css";
+@import "@fontsource-variable/exo";
 
 @theme {
   --font-hard: "Quantico", sans-serif;
+  --font-exo: "Exo Variable", sans-serif;
+
   --color-ingress-300: hsl(268 51.8% 78.8%);
   --color-ingress-500: hsl(268 51.8% 48.8%);
   --color-ingress-700: hsl(268 51.8% 18.8%);
@@ -40,7 +43,7 @@ header {
 .hero {
   @apply font-hard;
   & .actions {
-    @apply uppercase font-bold;
+    @apply font-bold uppercase;
   }
 }
 

@@ -71,16 +71,35 @@ export default defineConfig({
               },
             ],
           },
+          {
+            id: "contributing",
+            label: { en: "Contributing", "zh-Hans": "维基" },
+            icon: "heart",
+            link: "/contributing/",
+            items: [
+              {
+                label: "Content",
+                translations: { "zh-Hans": "内容" },
+                autogenerate: { directory: "contributing/content" },
+              },
+              {
+                label: "Community",
+                translations: { "zh-Hans": "社区" },
+                autogenerate: { directory: "contributing/community" },
+              },
+              {
+                label: "Technology",
+                translations: { "zh-Hans": "技术" },
+                autogenerate: { directory: "contributing/tech" },
+              },
+            ],
+          },
         ]),
       ],
     }),
     svelte(),
     brainDbAstro(),
   ],
-
-  redirects: {
-    "/": "/en",
-  },
 
   vite: {
     plugins: [tailwindcss()],

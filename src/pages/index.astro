@@ -1,0 +1,50 @@
+---
+import { getRelativeLocaleUrlList } from "astro:i18n";
+
+const SUPPORTED_LOCALES_URLS = getRelativeLocaleUrlList() ?? [];
+const SUPPORTED_LOCALES = SUPPORTED_LOCALES_URLS.map((l) =>
+  l.replaceAll("/", ""),
+);
+
+const DEFAULT_LOCALE = SUPPORTED_LOCALES[0] || "en";
+---
+
+<html
+  lang={DEFAULT_LOCALE}
+  data-supportedLocales={SUPPORTED_LOCALES.toString()}
+  data-defaultLocale={DEFAULT_LOCALE}
+>
+  <head>
+    <meta charset="UTF-8" />
+    <script is:inline>
+      const theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      document.documentElement.setAttribute("data-theme", theme);
+    </script>
+    <script>
+      import { match } from "@formatjs/intl-localematcher";
+
+      const data = document.documentElement.dataset;
+      const supportedLocales = data.supportedlocales?.split(",") ?? [];
+      const defaultLocale = data.defaultlocale ?? "en";
+
+      const languages = navigator.languages || [navigator.language];
+      const matched = match(languages, supportedLocales, defaultLocale, {
+        algorithm: "best fit",
+      });
+
+      window.location.replace(new URL(`/${matched}/`, window.location.origin));
+    </script>
+    <style>
+      :root,
+      :root[data-theme="light"] {
+        background-color: hsl(0, 0%, 100%);
+      }
+
+      :root[data-theme="dark"] {
+        background-color: hsl(224, 10%, 10%);
+      }
+    </style>
+  </head>
+</html>

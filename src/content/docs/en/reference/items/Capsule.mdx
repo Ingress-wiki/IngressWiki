@@ -1,0 +1,48 @@
+---
+title: Capsule
+topics: reference
+---
+
+import { IWLevel } from '@/components/wiki'
+
+A *Capsule* is a container that holds other items. They can be used to organize items and operate on them in bulk, most frequently for exchanging large numbers of items between [[Agent|Agents]].
+
+Capsules can hold up to 100 items. Any item, except for Capsules themselves, can be placed within a Capsule. The items within, as well as the Capsule itself, count towards the Agent's inventory cap. Items inside a Capsule are not included in the item category sums in the Inventory screen.
+
+## Capsule
+
+While Capsules are listed as Rare, they have a far lower drop rate than Rare Mods. Community studies have estimated the drop rate to be approximately 1 in 4 000 item rolls.
+
+Items remain inside a dropped Capsule. Other [[Agent|Agents]] can pick up the Capsule and acquire the items, which simplifies donating and exchanging gear.
+
+Beware that attempting to pick up a Capsule with insufficient inventory space will play the "pick up" sound effect, but the Capsule will remain on the ground. The message "Too many items." will appear on the Agent's [[Scanner]], in red text, similar to hacking a [[Portal]] during Cooldown or Burnout.
+
+Recycling a Capsule also recycles every item it contains, adding the total [[XM]] to the Agent's XM tank.
+
+Each Capsule, [Quantum Capsule](#quantum-capsule) and [Kinetic Capsule](#kinetic-capsule) has an eight character long hexadecimal ID which means that there can "only" be 16<sup>8</sup> (=4 294 967 296) Capsules at any given time. These IDs appear to be non-consecutive and are useful for identifying a dropped Capsule, and distinguishing them within an Agent's inventory.
+
+Currently, in Ingress Prime, Capsules also allow for labels to be placed on them in order to know at a glance what is kept in them.
+
+## Kinetic Capsule
+
+A *Kinetic Capsule* is a unique type of Capsules that crafts items through a combination of [[XM]], Materials (items), and kinetic energy charged by walking a predetermined distance. <IWLevel l={4}/>+ Agents can claim one *Common* Kinetic Capsule for free in the [[InGameStore|Store]] which is indestructible and reusable.[^kinetic-claim-free] *Rare* Kinetic Capsules function the same, with an exception: they can only be used three times. After that, they are destroyed. Rare Kinetic Capsules are currently obtained by hacking, as part of the monthly C.O.R.E. loadout or by buying them in the Store.
+
+A total of seven Kinetic Capsules can run at the same time by either activating the Common Kinetic Capsule and six Rare Kinetic Capsules or by activating seven Rare Kinetic Capsules. If a Kinetic Capsule is completed, but the item has not been claimed yet, it still counts towards this limit.
+
+The Kinetic Capsule management menu allows you to select from a menu of known *Programs*, which are instructions that can be executed to craft a specific item. These Kinetic Capsule Programs require a certain amount of XM and 8 km of walking in addition to the specific items consumed by the Kinetic Capsule.
+
+The maximum distance able to contribute to a Kinetic Capsule is 40 km per day. Any distance above 40 km walked within 24 hours will still contribute to the [[TrekkerMedal|Trekker]] medal but will not be counted towards Kinetic Capsule Programs. During normal operations, this means that up to five Programs can be completed within the 24 hour period. During events which reduce the distance requirements, more than five Programs can be completed per day.
+
+There are six permanent Programs that produce items of different rarity that can be crafted through the Kinetic Capsule. An Agent can use [[Resonator|Resonators]], [[XMPBurster|XMP Bursters]] and [[PowerCube|Power Cubes]] that are (above) the specified level (usually <IWLevel l={4}/>+).
+
+### Kinetic Capsule Programs
+
+## Quantum Capsule
+
+## Trivia
+
+## Gallery
+
+## References
+
+[^kinetic-claim-free]: https://community.ingress.com/en/discussion/12421/new-item-kinetic-capsule (shutdown, [archive](https://web.archive.org/web/20240329081645/https://community.ingress.com/en/discussion/12421/new-item-kinetic-capsule/))
