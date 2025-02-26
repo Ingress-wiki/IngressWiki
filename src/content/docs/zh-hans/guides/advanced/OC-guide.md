@@ -24,7 +24,7 @@ description: 一份详尽的 Ingress Overclock（超频入侵）功能指南，�
 
 如何认出 Glyphs？围绕着超立方体，使它的一个角朝向你。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b02fa604bd.png)
+![OC 展示](./assets/ocexample.png)
 
 
 
@@ -69,18 +69,18 @@ OC 是一种新的 Hack 方法，通过 AR 让 Glyphs 在空间中呈现。其�
 6. 如果 Po 获得 VPS: 激活实验性或 "Fair" 的状态，请进行 5 次或更多额外的扫描，并继续执行第 4 步。
 7. 如果 Po 获得 VPS: 不带实验标签或现实质量良好，请等待几天，让激活的 Po 在 Lightship 和 Ingress 数据库之间同步。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b031cf02ac.png)
+![Geospatial Browser](./assets/geospatial-browser.png)
 
 *已激活的 Po 的地图.注意左下角标签过滤*
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b031e4d2f6.png)
+![Lightship激活状态](./assets/oc-activate.png)
 *不同的激活阶段*
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b03dd9b8e2.png)
+![OC激活状态详细](./assets/oc-activate-detail)
 
 *在 Lightship 重新激活(左上图没有，下图有) ，在 Wayfarer 应用程序(右图)。请注意，新的扫描只显示在 Wayfarer 应用程序中*
 
-*![img](https://img-cdn.akass.cn/5/2023/12/657b0405ebcd7.png)*
+![Wayfarer手机应用展示](./assets/wayfarer-app-activate.png)
 
 *10 个扫描至少间隔 5 个小时*
 
@@ -150,7 +150,7 @@ OC 是一种新的 Hack 方法，通过 AR 让 Glyphs 在空间中呈现。其�
 
 目前，无法通过 Ingress Intel 查看已激活的传送门。然而，您可以使用 Lightship 网站的 Geospatial Browser 来搜索已激活的路径点。打开 lightship.dev 并进入地理空间浏览器，取消 “Experimental Quality” 图层的激活，因为这些 Po 未能成功激活。点击图中显示的标记将显示标记的详细信息，以及扫描创建的坐标和 3D 网格。如果这些标记也是 Ingress 中的 Po 它们应该可以激活过载。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b040e24011.png)
+![Lightship平台](./assets/lightship.png)
 
 上面三张图分别为 所有 *wayspots*，激活的 Po，production quality 的 po。注意图片底部的过滤选项。
 
@@ -158,17 +158,20 @@ OC 是一种新的 Hack 方法，通过 AR 让 Glyphs 在空间中呈现。其�
 
 ##### OC map
 
-由玩家 @Chestnut_LUO 在 Lightship 的数据上二次开发，过滤出所有 production quality 的 wayspots（可 OC 的 Po），每 2 小时与 Lightship 数据库同步。
-地图地址：https://oc-map.ingress.wiki/ 
+**由于Niantic关闭了全量OC数据公开，此项目已停止维护。**
+
+~~由玩家 @Chestnut_LUO 在 Lightship 的数据上二次开发，过滤出所有 production quality 的 wayspots（可 OC 的 Po），每 2 小时与 Lightship 数据库同步~~
+地图地址：https://oc-map.ingress.wiki/
 开源仓库：https://github.com/Ingress-wiki/OverClocking-Map
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b041273863.png)
+
+![oc-map](./assets/oc-map.png)
 
 ##### Wayfarer app
 
 你也可以通过 Wayfarer app 去寻找已激活的 Po，但是在 Wayfarer app 中没有 production quality 过滤器
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b041633ce1.png)
+![Wayfarer手机APP地图展示](./assets/wayfarer-app.png)
 
 使用 Wayfarer app 的地图，显示所有的 wayspots 已激活的 wayspots。
 
@@ -180,14 +183,14 @@ OC 是一种新的 Hack 方法，通过 AR 让 Glyphs 在空间中呈现。其�
 
 #### 如何开始 OC？
 
-首先，请确 Ingress 上是否可用超频（OC）功能。您可以通过 Po 的外观来判断：符合超频条件的 Po 会在中央展示一个明亮的菱形图标，并且在菜单中超频按钮不会被划掉。![](https://img-cdn.akass.cn/5/2023/12/65790585cd127.png)
+首先，请确 Ingress 上是否可用超频（OC）功能。您可以通过 Po 的外观来判断：符合超频条件的 Po 会在中央展示一个明亮的菱形图标，并且在菜单中超频按钮不会被划掉。![Ingress游戏内OC显示](./assets/ingame-oc.png)
 
 图 1:左边的 Po 可超频，右侧未激活超频
 图 2:如果距离 Po 20 米之内将显示菱形和超立方体
 
 接下来，靠近 Po 中心将距离保持在 20 米或更近的范围内，并在 Po 菜单中按下超频按钮（如果操作正确，其背景将变成黄色）。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b041cb6f4d.png)
+![Ingress内OC按钮样式](./assets/oc-button-style.png)
 
 四种不同的超频按钮：左上↖️：已激活超频，在 20 米范围内  右上↗️：未激活超频，不在 20 米范围内 左下↙️：未激活超频，在 20 米范围内 右下↘️：未激活超频，不在 20 米范围内
 
@@ -201,17 +204,17 @@ OC 是一种新的 Hack 方法，通过 AR 让 Glyphs 在空间中呈现。其�
 
 在输入完命令后将启动校准程序。手机摄像头将被激活并拍摄，拍摄到的视频将会被传输到游戏服务器。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b04205cd88.png)
+![校准OC](./assets/calibration.png)
 
 校准程序如图所示。
 游戏会提示将手机来回移动，但在阴暗条件下，尽量减少移动，以拍摄更清晰的画面。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b04255d8aa.png)
+![校准状态](./assets/calibration-status.png)
 
 成功校准和校准失败的示意图
 成功校准后将显示输出倍数，点击 "Continue" 将启动 OC 窗口。如果校准失败，您可以选择重新尝试校准或启动未校准 OC。此外，在 OC 完成后，您将被提示扫描传送门以提高质量。要了解在特定 Po 上需要扫描哪个精确区域进行校准，请参考该 Po 在 Lightship 中建立的三维模型。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b042ad696a.png)
+![3D模型](./assets/3D-model.png)
 
 ##### Q：校准需要多长时间？传输多少数据？
 
@@ -233,7 +236,7 @@ OC 是一种新的 Hack 方法，通过 AR 让 Glyphs 在空间中呈现。其�
 
 同时你可以在屏幕上方看见你的输出倍数和校准结果，校准成功将会显示绿色，否则显示紫色。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b042ddacaf.png)
+![放置超立方](./assets/deployment.png)
 
 放置超立方界面。绿色背景表示校准成功。若校准不成功，则背景颜色将变为紫色。
 
@@ -251,7 +254,7 @@ OC 是一种新的 Hack 方法，通过 AR 让 Glyphs 在空间中呈现。其�
 
 所有 Glyph 都将显示在超立方内。在熟悉 OC 时，你可能会遇到"嗯，这是什么？"的瞬间。你要么猜一下，要么在超立方体放置的位置周围走动，将线条的排列与字形对齐。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b04340d112.png)
+![OC Glyph](./assets/oc.png)
 
 *Glyph and… glyph?*
 
@@ -307,13 +310,13 @@ Level 8: 25 秒
 
 你只需要意识到常规的 glyph 是将超立方体投影到二维表面上。要获 glyph，你应该围绕超立方体行走，并将其中一个角指向你。如果你选择正确，你将可以获取到 glyph。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b02fa604bd.png)
+![](./assets/ocexample.png)
 
 #### OC 结算
 
 在输入完所有 glyph 后将出现熟悉画面，与常规 glyph 入侵不同它增加了输出倍数的显示。
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b043e7ec5b.png)
+![OC结算界面](./assets/oc-finish.png)
 
 Ingress 的 11 周年纪念日上的 OC 结算画面
 
@@ -360,9 +363,9 @@ fracker（能量塔压榨器）适用于所有 Hack。
 
 已校准 OC：Glyph 点数 + 5
 
-![img](https://img-cdn.akass.cn/5/2023/12/657b04411d7e7.png)
+![OC点数计算](./assets/oc-point.png)
 
-![image-20231214204622712](https://img-cdn.akass.cn/5/2023/12/657af92364dd7.png)
+![OC点数计算](./assets/oc-point-zh.png)
 
 OC 中 Glyph 全对输出的超频点数表
 
@@ -391,7 +394,7 @@ OC 中 Glyph 全对输出的超频点数表
 
 有一种方法可以检查您的设备是否支持 OC：打开任何启用 OC 的 Po，例如 NL-1331 门户，并尝试按下超频按钮。你会看到“设备不支持超频”或“无法远程超频”。
 
-![image-20231214210123091](https://img-cdn.akass.cn/5/2023/12/657afccdd5eda.png)
+![OC支持](./assets/oc-ability.png)
 
 如果您的设备不支持超频，则在任何距离上按下超频按钮后会看到这一信息，“无法远程超频”。
 
