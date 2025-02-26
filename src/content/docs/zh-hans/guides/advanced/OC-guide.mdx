@@ -3,18 +3,20 @@ title: （最全面的）Ingress Overclock指南
 description: 一份详尽的Ingress Overclock（超频入侵）功能指南，包含使用方法、技巧和注意事项
 ---
 
+import { Badge } from '@astrojs/starlight/components';
+
+
 *本文翻译自 [@a1mirr](http://t.me/a1mirr) 2023/12/2 版*
 
 *[原文地址](https://docs.google.com/documen/d/1Zq5nQBR2wK84bgiHj3frVVtFgdP_gbo61cME7Mdq_LM) 已获得原作者授权*
 
-####TL;DR（省流）:
+#### TL;DR（省流）:
 
-#####Why：
+##### Why：
 
 - 快速从Po田获取物资
-- 快速获取Hacker与 Translator徽章/牌子点数
-
-#####How：
+- 快速获取 <Badge text="Hacker" variant="note" /> 与<Badge text="Translator" variant="note" />徽章/牌子点数
+##### How：
 
 - 找到一个已经激活超频的Po（可以看见有菱形形状的模型在Po上）
 - 距离Po 20 米内，按超频（Overclock）按钮
@@ -47,12 +49,12 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 通过以下方式进行OC：
 
 1. 找到一个已经激活超频的Po（可以看见有菱形形状的模型在Po上）
-2. 距离Po 20 米内，按超频（Overclock）按钮
+2. 距离Po 20 米内，按超频<Badge text="Overclock" variant="tip" />按钮
 3. 将摄像头指向Po的实物
 4. 认出Glyphs并输入
 5. 享受并重复这个过程
 
-####OC如此复杂，为什么我们需要它？
+#### OC如此复杂，为什么我们需要它？
 
 尽管它增加了复杂性，但是当熟练掌握OC技巧时，它将提供大量的游戏优势。
 
@@ -76,7 +78,7 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 ![Lightship激活状态](./assets/oc-activate.png)
 *不同的激活阶段*
 
-![OC激活状态详细](./assets/oc-activate-detail)
+![OC激活状态详细](./assets/oc-activate-detail.png)
 
 *在Lightship重新激活(左上图没有，下图有) ，在Wayfarer应用程序(右图)。请注意，新的扫描只显示在Wayfarer应用程序中*
 
@@ -84,7 +86,7 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 *10 个扫描至少间隔 5 个小时*
 
-####Q&A：
+#### Q&A：
 
 ##### 1.有没有关于如何进行最佳扫描以成功激活的建议？
 
@@ -146,7 +148,7 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 #### 如何通过地图找到可超频的Po
 
-#####Lightship
+##### Lightship
 
 目前，无法通过Ingress Intel查看已激活的传送门。然而，您可以使用Lightship网站的Geospatial Browser来搜索已激活的路径点。打开lightship.dev并进入地理空间浏览器，取消 “Experimental Quality” 图层的激活，因为这些Po未能成功激活。点击图中显示的标记将显示标记的详细信息，以及扫描创建的坐标和 3D网格。如果这些标记也是Ingress中的Po它们应该可以激活过载。
 
@@ -156,7 +158,7 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 
 
-#####OC map
+##### OC map
 
 **由于Niantic关闭了全量OC数据公开，此项目已停止维护。**
 
@@ -167,7 +169,7 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 ![oc-map](./assets/oc-map.png)
 
-#####Wayfarer app
+##### Wayfarer app
 
 你也可以通过Wayfarer app去寻找已激活的Po，但是在Wayfarer app中没有production quality过滤器
 
@@ -175,7 +177,7 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 使用Wayfarer app的地图，显示所有的wayspots已激活的wayspots。
 
-#####Q：我提交的Wayspo被分类为 "**Good/Production**"，但在Ingress中无法超频。出了什么问题？
+##### Q：我提交的Wayspo被分类为 "**Good/Production**"，但在Ingress中无法超频。出了什么问题？
 
 如果一个Wayspo刚刚被激活并分类为 "**Good/Production**"，相应的Portal可能还没有激活超频功能。需要等待Ingress数据库同步，包括超频状态，因此你可能需要等待几天，才能对该Portal进行超频操作。
 
@@ -196,7 +198,7 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 随后，将出现一个与常规Glyphs入侵相同的命令界面。目前，只有两个选项可用：“More” 以获取Key和 “Less” 以避免获得Key。
 
-#####Q：如果输入其他的命令？（如 "complex"、"simple"）
+##### Q：如果输入其他的命令？（如 "complex"、"simple"）
 
 将显示"未知命令"，其余Glyphs未作测试。
 
@@ -212,19 +214,19 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 ![校准状态](./assets/calibration-status.png)
 
 成功校准和校准失败的示意图
-成功校准后将显示输出倍数，点击 "Continue" 将启动OC窗口。如果校准失败，您可以选择重新尝试校准或启动未校准OC。此外，在OC完成后，您将被提示扫描传送门以提高质量。要了解在特定Po上需要扫描哪个精确区域进行校准，请参考该Po在 Lightship中建立的三维模型。
+成功校准后将显示输出倍数，点击 <Badge text="Continue" variant="tip" /> 将启动OC窗口。如果校准失败，您可以选择重新尝试校准<Badge text="Retry" variant="tip" />或启动未校准OC<Badge text="Continue" variant="tip" />。此外，在OC完成后，您将被提示扫描传送门以提高质量。要了解在特定Po上需要扫描哪个精确区域进行校准，请参考该Po在 Lightship中建立的三维模型。
 
 ![3D模型](./assets/3D-model.png)
 
-#####Q：校准需要多长时间？传输多少数据？
+##### Q：校准需要多长时间？传输多少数据？
 
 校准通常需要 10 秒，如果扫描良好（包括建立的模型质量和OC时质量）可以缩短到 1-2 秒。在整个校准过程中，视频以 500-700KB/s速度上传
 
-#####Q：在校准中主动退出会发生什么？
+##### Q：在校准中主动退出会发生什么？
 
 当校准中你主动按下退出按钮会以常规Hack结算
 
-#####Q：输出倍数将如何计算？
+##### Q：输出倍数将如何计算？
 
 当校准失败输出倍数固定为x1；如果成功输出倍数最高可达到x4，具体取决于Po在过热（大CD）前剩余的Hack次数。例如，在没有Mod的 Po上进行一次常规Hack/Glyph入侵后使用OC入侵，如果校准成功将会获得x3 的输出倍数。在具有 2 个VRMH的 Po上最高可以获得 5 次x4 倍数和一次x2 倍数的OC入侵。
 
@@ -232,25 +234,25 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 #### 放置超立方
 
-在放置界面中，一个预览的超立方体将出现。你需要按下"Deploy"选择一个合适的位置放置超立方。
+在放置界面中，一个预览的超立方体将出现。你需要按下<Badge text="Deploy" variant="tip" />选择一个合适的位置放置超立方。
 
 同时你可以在屏幕上方看见你的输出倍数和校准结果，校准成功将会显示绿色，否则显示紫色。
 
-![放置超立方](./assets/deploymen.png)
+![放置超立方](./assets/deployment.png)
 
 放置超立方界面。绿色背景表示校准成功。若校准不成功，则背景颜色将变为紫色。
 
 
 
-#####Q: 在超立方旋转时，有没有最佳的放置超立方体的时机？
+##### Q: 在超立方旋转时，有没有最佳的放置超立方体的时机？
 
 没有，超立方无论何时都会被设定在一个特定的状态。唯一需要考虑的是在完成扫描之后大幅度运动使超粒方丢失。在放置超立方体之前转动超过 90 度可能会导致镜像符号的显示(就像从超立方体的后面看过去一样)。
 
-#####Q: 有没有数据发送到Niantic服务器？有数据使用吗？
+##### Q: 有没有数据发送到Niantic服务器？有数据使用吗？
 
 没有，数据只在校准过程中传输；所有其他操作都在设备上执行。
 
-####OC过程
+#### OC过程
 
 所有Glyph都将显示在超立方内。在熟悉OC时，你可能会遇到"嗯，这是什么？"的瞬间。你要么猜一下，要么在超立方体放置的位置周围走动，将线条的排列与字形对齐。
 
@@ -258,11 +260,11 @@ OC是一种新的Hack方法，通过AR让 Glyphs在空间中呈现。其关键�
 
 *Glyph and…glyph?*
 
-和普通Glyph入侵一样，出现的图形数量和Po的等级挂钩。同时也有"Redo"让您重画Glyph。
+和普通Glyph入侵一样，出现的图形数量和Po的等级挂钩。同时也有<Badge text="Redo" variant="tip" />让您重画Glyph。
 
 
 
-#####Q：OC的 Hack的时间限制是多少？
+##### Q：OC的 Hack的时间限制是多少？
 
 时间依据等级而定
 
@@ -278,31 +280,31 @@ Level 8: 25 秒
 
 **嫌太少了？在更新之前L8 的入侵时间只有 17 秒🌚**
 
-#####Q：经过练习最快能用多少秒完成L8 的OC？
+##### Q：经过练习最快能用多少秒完成L8 的OC？
 
 如果你幸运的找到了正确的组合（第一个Glyph显而易见且背了 5 图模板）可以在 7-8 秒内完成，否则可能需要 12-13 秒。这取决于你的练习程度。
 
-#####Q: 我需要等多久才能看到glyph的显示？超立方变换都需要很久！
+##### Q: 我需要等多久才能看到glyph的显示？超立方变换都需要很久！
 
 第一个符号出现前超立方会显示变换的动画。每个后续的glyph在按下上一个glyph提交按钮后的一秒钟内出现。
 
-#####Q: 我能取消之前输入的glyph吗？
+##### Q: 我能取消之前输入的glyph吗？
 
 不，不可能取消前一个glyph的输入，只能取消当前glyph的输入。
 
-#####Q: 我在第一个glyph之后就理解了整个组合！我需要等待它们被绘制吗？（背图）
+##### Q: 我在第一个glyph之后就理解了整个组合！我需要等待它们被绘制吗？（背图）
 
 如果你理解了组合，就不需要等待后续的glyph；你可以立即输入它，这完全取决于你手指的灵活性。
 
-#####Q: 顶部的条形和高亮表示什么？它是如何工作的？
+##### Q: 顶部的条形和高亮表示什么？它是如何工作的？
 
 顶部条形是一个计时器，指示剩余时间，在OC期间逐渐减少。如果剩余时间超过一半，它会变为绿色；如果是 25%-50%，它会变为黄色；如果少于 25%，则会变为红色。
 
-#####Q: 如果我在OC过程中按下退出按钮会发生什么？
+##### Q: 如果我在OC过程中按下退出按钮会发生什么？
 
-在OC期间按退出按钮结算讲按照已经输入的进行结算。
+在OC期间按退出按钮<Badge text="Exit" variant="tip" />结算将按照已经输入的进行结算。
 
-#####Q：如果在OC期间退出游戏会发生什么？
+##### Q：如果在OC期间退出游戏会发生什么？
 
 和普通glyph入侵一样，你可以重新开始OC。
 
@@ -312,7 +314,7 @@ Level 8: 25 秒
 
 ![](./assets/ocexample.png)
 
-####OC结算
+####  OC结算
 
 在输入完所有glyph后将出现熟悉画面，与常规glyph入侵不同它增加了输出倍数的显示。
 
@@ -331,31 +333,31 @@ Ingress的 11 周年纪念日上的OC结算画面
 -Po的 Hack计数将减少 4 个。
 - 冷却时间与常规Hack与 Glyph hack相当
 
-#####Q：OC会消耗多少XM？
+##### Q：OC会消耗多少XM？
 
 XM消耗将相当于进行 1 次Hack所消耗的量（在L8 传送门的情况下，为 400 XM）。
 
-#####Q：如果XM不足，可以进行OC吗？
+##### Q：如果XM不足，可以进行OC吗？
 
 是的，可以进行OC，不进行结算且显示最终屏幕后将显示一个错误，并且您将需要重新进行Hack。但是您没有剩余XM将无法进行OC。省流：XM非空可进行OC，但如果XM小于 入侵所消耗的XM不进行结算。
 
-#####Q：fracker（能量塔压榨器）是否对OC生效？
+##### Q：fracker（能量塔压榨器）是否对OC生效？
 
 fracker（能量塔压榨器）适用于所有Hack。
 
-#####Q:Epoch（每日连签）增倍奖励会影响OC吗？
+##### Q：Epoch（每日连签）增倍奖励会影响OC吗？
 
 如果OC是当天第一次Hack，Epoch会影响OC四次（假设为x4 输出倍率）中的其中一次，而不是全部。
 
-#####Q：如果未输入控制Glyph，将会掉落多少个Key？
+##### Q：如果未输入控制Glyph，将会掉落多少个Key？
 
 如果未输入“more”或“less”Glyph，并且库存中没有Key，则会掉落 0-1 个Key。如果Key已经在库存中，则不会掉落任何Key。
 
-#####Q：如何了解OC获得了多少Glyph点数？
+##### Q：如何了解OC获得了多少Glyph点数？
 
 常规Glyph Hack的 Glyph点数点数乘以输出倍数。例如，对于L6（4 个Glyph点数）Hack，所有Glyph点数输入正确且有x3 奖励，将给出 8 * 3 = 24 个点数。
 
-#####Q：如何计算超频点数
+##### Q：如何计算超频点数
 
 最近，Niantic更改了点数计算机制，现在计算如下：
 
@@ -363,15 +365,15 @@ fracker（能量塔压榨器）适用于所有Hack。
 
 已校准OC：Glyph点数 + 5
 
-![OC点数计算](./assets/oc-poin.png)
+![OC点数计算](./assets/oc-point.png)
 
-![OC点数计算](./assets/oc-poin-zh.png)
+![OC点数计算](./assets/oc-point-zh.png)
 
 OC中 Glyph全对输出的超频点数表
 
 校准成功额外获得 5 点
 
-#####Q：AP如何计算？
+##### Q：AP如何计算？
 
 与Glyph Hack规则一致并乘以输出倍数，无论Po所在阵营。
 
@@ -385,14 +387,14 @@ OC中 Glyph全对输出的超频点数表
 
 - 在某些手机上，glyph的线条几乎看不见。
 - 有时（非常罕见）应用在OC过程中崩溃。
-- 如果应用在第一次部署 超立方 时出现滞后，那么超立方可能会变得非常奇怪，从而更加困难地解读glyph。在这种情况下，重新部署不会有帮助。
+- 如果应用在第一次部署 超立方 时出现滞后，那么超立方可能会变得非常奇怪，从而更加困难地解读glyph。在这种情况下，重新部署<Badge text="Redeploy" variant="tip" />不会有帮助。
 - 有时超立方可能会开始“离开”，为此niantic提供了重新部署按钮。
 
-#####OC对设备的要求
+##### OC对设备的要求
 
 如了解相关情况请联系@a1mirr（TG）或联系译者@Chestnu_LUO，以协助更新文章。
 
-有一种方法可以检查您的设备是否支持OC：打开任何启用OC的Po，例如NL-1331门户，并尝试按下超频按钮。你会看到“设备不支持超频”或“无法远程超频”。
+有一种方法可以检查您的设备是否支持OC：打开任何启用OC的Po，例如NL-1331门户，并尝试按下超频按钮<Badge text="Overclock" variant="tip" />。你会看到“设备不支持超频”或“无法远程超频”。
 
 ![OC支持](./assets/oc-ability.png)
 
@@ -403,7 +405,7 @@ OC中 Glyph全对输出的超频点数表
 <u>**加粗且下划线**</u>的Glyph为需要注意会产生歧义的地方。当两个已知的Glyphs序列具有相同的开头在产生不同的Glyph会用<u>**加粗且下划线**</u>标注。
 你可以在这个频道找到所有OC Glyphs序列的结算画面截图。[链接](https://t.me/OverclockSequences)
 
-###L8 五图 (23):
+### L8 五图 (23):
 
 Avoid Chaos Avoid Shapers Lie
 
@@ -451,7 +453,7 @@ XM**<u>Create</u>**Complex Human Destiny
 
 XM**<u>Path</u>**Future Destiny Harmony
 
-###L6-L7 四图 (19)
+### L6-L7 四图 (19)
 
 All Chaos Inside Body
 
@@ -491,7 +493,7 @@ Truth Idea Discover XM
 
 Weak Portal Weak Field
 
-###L3-L5 三图 (目前统计到 16 种)
+### L3-L5 三图 (目前统计到 16 种)
 
 All Civilization Chaos
 
@@ -529,7 +531,7 @@ Together Pure Journey
 
 发送建议和反馈至Telegram@a1mirr或译者@Chestnu_LUO。
 
-###Greetings
+### Greetings
 
 @EchoZer0, @quirischa为原版校对和建议
 
