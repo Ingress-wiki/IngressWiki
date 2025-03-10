@@ -1,0 +1,120 @@
+name: Run zhlint on Chinese Documentation
+
+on:
+  pull_request:
+    paths:
+      - 'src/content/docs/zh-hans/**'
+
+jobs:
+  zhlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v45
+        with:
+          files: src/content/docs/zh-hans/**/*.md{,x}
+          separator: ","
+
+      - name: Run zhlint with retries
+        id: run-zhlint
+        run: |
+          changed_files="${{ steps.changed-files.outputs.all_changed_files }}"
+          if [ -z "$changed_files" ]; then
+            echo "No files to lint"
+            exit 0
+          fi
+
+          max_retries=10
+          count=0
+          set +e
+          while [ $count -lt $max_retries ]; do
+            echo "Linting attempt $((count+1)) of $max_retries"
+            output=$(pnpm exec zhlint "{$changed_files}" --fix 2>&1)
+            echo "$output"
+            if echo "$output" | grep -q "No error found."; then
+              echo "All issues resolved"
+              break
+            fi
+            ((count++))
+          done
+          set -e
+
+      - name: Generate lint patch
+        run: git diff > lint.patch
+
+      - name: Check patch content
+        id: check-patch
+        run: |
+          if [ -s lint.patch ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Linter found formatting issues"
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No formatting issues found"
+          fi
+
+      - name: Upload lint patch
+        if: steps.check-patch.outputs.has_changes == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: lint.patch
+          path: lint.patch
+
+      - name: Post PR comment
+        if: steps.check-patch.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { has_changes } = process.env;
+            let artifactUrl = '';
+            
+            if (has_changes === 'true') {
+              const artifacts = await github.rest.actions.listWorkflowRunArtifacts({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                run_id: context.runId,
+              });
+              
+              const artifact = artifacts.data.artifacts.find(
+                a => a.name === 'lint.patch'
+              );
+              
+              if (artifact) {
+                artifactUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}/artifacts/${artifact.id}`;
+              }
+            }
+
+            const message = has_changes === 'true'
+              ? `🔴 **Formatting Issues Detected**\n\nChinese documentation changes require formatting corrections. Download the [patch file](${artifactUrl}) and apply it using:\n\`\`\`sh\ngit apply lint.patch\n\`\`\``
+              : '🟢 **Formatting Approved**\n\nAll Chinese documentation changes meet the formatting requirements.';
+
+            await github.rest.issues.createComment({
+              issue_number: ${{ github.event.pull_request.number }},
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });
+        env:
+          has_changes: ${{ steps.check-patch.outputs.has_changes }}
+
+      - name: Fail if formatting issues exist
+        if: steps.check-patch.outputs.has_changes == 'true'
+        run: exit 1

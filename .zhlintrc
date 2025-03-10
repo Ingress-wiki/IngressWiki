@@ -1,0 +1,29 @@
+{
+  "preset": "default",
+  "rules": {
+    "halfwidthPunctuation": "",
+    "fullwidthPunctuation": "，。：；？！“”‘’（）",
+    "unifiedPunctuation": {
+      "？？": true,
+      "！！": true,
+      "？！": true,
+      "！？": true,
+      "/": true,
+      "~": true,
+      "…": true,
+      "·": true,
+      "「": [
+        "“"
+      ],
+      "」": [
+        "”"
+      ],
+      "『": [
+        "‘"
+      ],
+      "』": [
+        "’"
+      ]
+    }
+  }
+}

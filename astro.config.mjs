@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight";
 import svelte from "@astrojs/svelte";
 import brainDbAstro from "@braindb/astro";
 import starlightSidebarTopics from "starlight-sidebar-topics";
+import rehypeHeti from "./src/utils/rehype-heti";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -100,6 +101,12 @@ export default defineConfig({
     svelte(),
     brainDbAstro(),
   ],
+
+  markdown: {
+    rehypePlugins: [
+      rehypeHeti
+    ]
+  },
 
   vite: {
     plugins: [tailwindcss()],
