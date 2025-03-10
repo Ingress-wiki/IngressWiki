@@ -1,0 +1,11 @@
+---
+// MIT License
+// Copyright (c) 2024 Emerald Squirrel @ https://github.com/withastro/starlight/issues/561#issuecomment-2176366444
+// Conditional.astro
+const { cond } = Astro.props;
+
+// mostly used to workaround Table of Content limitations in Astro
+// delucis @ https://github.com/withastro/starlight/issues/561#issuecomment-1695482643
+---
+
+{cond && <slot />}
